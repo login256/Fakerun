@@ -10,11 +10,67 @@
 		#container {
 			margin: 0;
 			width: 100%;
-			height: 70%;
+			height: 80%;
+		}
+		
+		.icon{
 		}
 
 		.head {
 			margin: 0;
+			background-color: 111166;
+			height: 7%;
+		}
+		
+		.bottom {
+			margin: 0;
+			background-color: 111166;
+			height: 13%;
+		}
+
+		.infor {
+			width: 30%;
+			height: 100%;
+			margin-left: 2%;
+			float: left;
+		}
+
+		.number1 {
+			width: 80%;
+			height: 100%;
+			margin-top: 10%;
+			color:white;
+			text-align: center;
+			vertical-align:middle;
+			font-size:50px;
+			float: left;
+		}
+
+		.unit {
+			width: 19%;
+			margin-top: 40%;
+			color:white;
+			text-align: center;
+			vertical-align:bottom;
+			font-size:15px;
+			float: left;
+		}
+
+		.number2 {
+			width: 100%;
+			height: 30%;
+			margin-top: 30%;
+			color:white;
+			text-align: center;
+			vertical-align:middle;
+			font-size:20px;
+		}
+
+		.descri {
+			width: 100%;
+			color:#bdc3c7;
+			text-align: center;
+			font-size:10px;
 		}
 	</style>
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
@@ -22,16 +78,41 @@
 </head>
 
 <body style="margin: 0;">
-	<div class="head" style="background-color: 111166; height: 10%;">
-		<div style="margin: 5% 0 0 5%;float: left;">
-			<img src="images/back.png" />
+	<div class="head">
+		<div style="margin: 2.5% 0 0 2.5%;float: left;" class="icon">
+			<img src="images/back.svg" height="50%" />
 		</div>
-		<div style="margin: 5% 5% 0 0;float: right;">
-			<img src="images/share.svg" height="50%" />
+		<div style="margin: 2.5% 2.5% 0 0;float: right;" class="icon">
+			<img src="images/share.svg" height="50%"/>
 		</div>
 		<div class=clear></div>
 	</div>
 	<div id="container"></div>
+	<div class="bottom">
+		<div class="infor">
+			<div class="number1"  id="length">
+			</div>
+			<div class="unit">
+				km
+			</div>
+		</div>
+		<div class="infor">
+			<div class="number2" id="time" style="border-left: 1px white solid;">
+			</div>
+			<div class="descri">
+				用时
+			</div>
+		</div>
+		<div class="infor">
+			<div class="number2" id="speed">
+			</div>
+			<div class="descri">
+				配速
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+
 	<script type="text/javascript">
 		var map = new AMap.Map('container', {
 			zoom: 17,//级别
@@ -65,12 +146,10 @@
 				[116.275461, 40.152659]
 			];
 		var siz = 20;
-		//		function getline()
-		//		{
 		var drw = new Array;
 		var cnt = 0;
 		drw[cnt] = path[0];
-		let n = Math.random() * 5 + 5;
+		let n = Math.random() * 3 + 7;
 		for (tt = 1; tt <= n; tt++) {
 			for (i = 1; i < siz; i++) {
 				while (Math.random() < 0.65) {
@@ -109,7 +188,9 @@
 		}
 		var speed=1000/(Math.random()+4.5);
 		var time=len/speed;
-//		}
+		document.getElementById("length").innerHTML=(len/1000).toFixed(2).toString();
+		document.getElementById("time").innerHTML=Math.floor(time/60).toString()+":"+Math.floor(time).toString()+":"+Math.floor((time-+Math.floor(time))*60).toString();
+		document.getElementById("speed").innerHTML=Math.floor(time).toString()+"'"+Math.floor((speed-+Math.floor(speed))*60).toString()+'"';
 	</script>
 </body>
 
