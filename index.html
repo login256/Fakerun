@@ -42,7 +42,7 @@
 			color:white;
 			text-align: center;
 			vertical-align:middle;
-			font-size:50px;
+			font-size:45px;
 			float: left;
 		}
 
@@ -190,7 +190,7 @@
 		var time=len/speed;
 		document.getElementById("length").innerHTML=(len/1000).toFixed(2).toString();
 		document.getElementById("time").innerHTML=Math.floor(time/60).toString()+":"+Math.floor(time).toString()+":"+Math.floor((time-+Math.floor(time))*60).toString();
-		document.getElementById("speed").innerHTML=Math.floor(time).toString()+"'"+Math.floor((speed-+Math.floor(speed))*60).toString()+'"';
+		document.getElementById("speed").innerHTML=Math.floor(speed).toString()+"'"+Math.floor((speed-+Math.floor(speed))*60).toString()+'"';
 	</script>
 </body>
 
