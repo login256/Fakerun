@@ -209,7 +209,7 @@
 			cur = AMap.GeometryUtil.distance(path[i],path[i+1]);;
 			len += cur;
 		}
-		var speed=1000/(Math.random()+4.5);
+		var speed=1000/(Math.random()+5);
 		var time=len/speed;
 		document.getElementById("length").innerHTML=(len/1000).toFixed(2).toString();
 		document.getElementById("time").innerHTML=Math.floor(time/60).toString()+":"+Math.floor(time).toString()+":"+Math.floor((time-+Math.floor(time))*60).toString();
