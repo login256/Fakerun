@@ -38,21 +38,21 @@
 		.number1 {
 			width: 80%;
 			height: 100%;
-			margin-top: 10%;
+			margin-top: 15%;
 			color:white;
 			text-align: center;
 			vertical-align:middle;
-			font-size:45px;
+			font-size:310%;
 			float: left;
 		}
 
 		.unit {
 			width: 19%;
-			margin-top: 40%;
+			margin-top: 45%;
 			color:white;
 			text-align: center;
 			vertical-align:bottom;
-			font-size:15px;
+			font-size:100%;
 			float: left;
 		}
 
@@ -72,6 +72,16 @@
 			text-align: center;
 			font-size:10px;
 		}
+
+		.dateinfor {
+			width: 80%;
+			float: left;
+			color: #bdc3c7;
+			text-align: center;
+			margin-top: 2.5%;
+			font-size: 20px;
+		}
+
 	</style>
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 	<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.6&key=c3a5476ced5a3232d02f11d91b509b21"></script>
@@ -81,6 +91,11 @@
 	<div class="head">
 		<div style="margin: 2.5% 0 0 2.5%;float: left;" class="icon">
 			<img src="images/back.svg" height="50%" />
+		</div>
+		<div class="dateinfor">
+			<div id="date">
+
+			</div>
 		</div>
 		<div style="margin: 2.5% 2.5% 0 0;float: right;" class="icon">
 			<img src="images/share.svg" height="50%"/>
@@ -191,6 +206,10 @@
 		document.getElementById("length").innerHTML=(len/1000).toFixed(2).toString();
 		document.getElementById("time").innerHTML=Math.floor(time/60).toString()+":"+Math.floor(time).toString()+":"+Math.floor((time-+Math.floor(time))*60).toString();
 		document.getElementById("speed").innerHTML=Math.floor(1000/speed).toString()+"'"+Math.floor((1000/speed-Math.floor(1000/speed))*60).toString()+'"';
+		function get_rand(fi,se){
+			return Math.floor	(Math.random()*(se-fi+1))+fi;
+		}
+		document.getElementById("date").innerHTML=(2018).toString()+"年"+(get_rand(3,5)).toString()+"月"+(get_rand(1,30)).toString()+"日"+get_rand(20,21).toString()+":"+get_rand(10,60).toString();
 	</script>
 </body>
 
