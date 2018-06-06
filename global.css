@@ -1,0 +1,117 @@
+/* Fonts */
+@font-face{
+  font-family: 'D-DIN';
+  src: url("font/D-DIN.otf");
+}
+@font-face{
+  font-family: 'D-DIN';
+  src: url("font/D-DIN-Bold.otf");
+  font-weight: bold;
+}
+@font-face{
+  font-family: 'D-DIN';
+  src: url("font/D-DIN-Italic.otf");
+  font-style: italic;
+}
+
+@font-face{
+  font-family: 'D-DIN-Condensed';
+  src: url("font/D-DINCondensed.otf");
+}
+@font-face{
+  font-family: 'D-DIN-Condensed';
+  src: url("font/D-DINCondensed-Bold.otf");
+  font-weight: bold;
+}
+
+/* Styles */
+.clear {
+  clear: both;
+  height: 0;
+}
+
+#container {
+  margin: 0;
+  width: 100%;
+  height: 80%;
+}
+
+.icon{
+}
+
+.head {
+  margin: 0;
+  background-color: #111166;
+  height: 7%;
+}
+
+.bottom {
+  margin: 0;
+  background-color: #111166;
+  height: 13%;
+}
+
+.infor1 {
+  width: 35%;
+  height: 100%;
+  margin-left: 2%;
+  float: left;
+}
+
+.infor2 {
+  width: 25%;
+  height: 100%;
+  margin-left: 5%;
+  float: left;
+}
+
+.number1 {
+  width: 80%;
+  height: 100%;
+  margin-top: 10%;
+  color:white;
+  text-align: center;
+  vertical-align:middle;
+  font-size:52px;
+  float: left;
+  font-family: D-DIN-Condensed;
+}
+
+.unit {
+  width: 19%;
+  margin-top: 37%;
+  color:white;
+  text-align: center;
+  vertical-align:bottom;
+  font-size:15px;
+  float: left;
+  font-family: D-DIN;
+}
+
+.number2 {
+  width: 100%;
+  height: 30%;
+  margin-top: 30%;
+  color:white;
+  text-align: center;
+  vertical-align:middle;
+  font-size:20px;
+  font-family: D-DIN;
+}
+
+.descri {
+  width: 100%;
+  color:#bdc3c7;
+  text-align: center;
+  font-size:10px;
+}
+
+.dateinfor {
+  width: 80%;
+  float: left;
+  color: #bdc3c7;
+  text-align: center;
+  margin-top: 2.5%;
+  font-size: 20px;
+}
+
