@@ -83,11 +83,12 @@
 		var siz = 20;
 		var drw = new Array;
 		var cnt = 0;
+		var speed=1000/(Math.random()+5);
 		drw[cnt] = path[0];
 		let n = Math.random() * 3 + 7;
 		for (tt = 1; tt <= n; tt++) {
 			for (i = 1; i < siz; i++) {
-				while (Math.random() < 0.65) {
+				do{
 					var mx = (drw[cnt][0] + path[i][0]) / 2;
 					var my = (drw[cnt][1] + path[i][1]) / 2;
 					var x, y;
@@ -103,7 +104,7 @@
 					y += (Math.random() - 0.5) * 0.000005;
 					cnt++;
 					drw[cnt] = [x, y];
-				}
+				}while (Math.random() < 0.65) 
 				//		cnt++;
 				//		drw[cnt]=path[i];
 			}
@@ -121,7 +122,6 @@
 			cur = AMap.GeometryUtil.distance(path[i],path[i+1]);;
 			len += cur;
 		}
-		var speed=1000/(Math.random()+5);
 		var time=len/speed;
 		document.getElementById("length").innerHTML=(len/1000).toFixed(2).toString();
 		document.getElementById("time").innerHTML=Math.floor(time/60).toString()+":"+Math.floor(time).toString()+":"+Math.floor((time-+Math.floor(time))*60).toString();
